@@ -23,8 +23,8 @@ namespace activitatiSportive
             Label1.Visible = false;
             Label2.Visible = Label3.Visible = Label4.Visible = Label5.Visible = Label6.Visible = Label7.Visible = true; 
             Label2.Text = "ID Student";
-            BussinesLayes bll = new BussinesLayes();
-            bll.TabelSelect("StudentiParticipanti", GridView1);
+          //  BussinesLayer bll = new BussinesLayer();
+         //   bll.TabelSelect("StudentiParticipanti", GridView1);
         }
 
         protected void Button9_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace activitatiSportive
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            BussinesLayes bll = new BussinesLayes();
+            BussinesLayer bll = new BussinesLayer();
             bll.InsertInStdPart(TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox4.Text, TextBox6.Text, TextBox7.Text);
         }
 

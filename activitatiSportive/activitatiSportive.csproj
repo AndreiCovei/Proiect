@@ -69,7 +69,7 @@
     <Compile Include="Administrator.aspx.designer.cs">
       <DependentUpon>Administrator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BussinesLayes.cs" />
+    <Compile Include="BussinesLayer.cs" />
     <Compile Include="DataLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartPage.aspx.cs">
