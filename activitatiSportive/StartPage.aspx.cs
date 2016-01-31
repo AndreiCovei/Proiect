@@ -31,6 +31,11 @@ namespace activitatiSportive
             {
                 Response.Redirect("Administrator.aspx");
             }
+            else if (bus.LogareLaBazaDeDate(UserName.Text, Password.Text, userValidation, passwordValidation) == 2)
+            {
+                Response.Redirect("User.aspx");
+            }
+
 
         }
     }

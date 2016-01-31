@@ -12,52 +12,37 @@
     
         <asp:Panel ID="Fundal" runat="server" BackColor="#0099FF" Height="464px">
             <br />
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
-            <asp:TextBox ID="TextBox1" runat="server" Width="49px"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Insert Student Participant" Visible="False" />
-            <asp:Button ID="Button3" runat="server" Text="Insert Etape" Visible="False" />
-            <asp:Button ID="Button4" runat="server" Text="Button" Visible="False" />
-            <asp:Button ID="Button5" runat="server" Text="Button" Visible="False" />
-            <asp:Button ID="Button6" runat="server" Text="Button" Visible="False" />
-            <asp:Button ID="Button7" runat="server" Text="Button" Visible="False" />
-            <asp:Button ID="Button8" runat="server" Text="Button" Visible="False" />
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
-            <asp:Button ID="Button10" runat="server" OnClick="Button10_Click" style="margin-left: 180px" Text="back" Width="75px" />
+            <asp:Button ID="Button2" runat="server" Height="30px" OnClick="Button2_Click" style="margin-left: 8px" Text="Insert Utilizator" Visible="False" Width="184px" />
+            <asp:TextBox ID="TextBox11" runat="server" style="z-index: 1; left: 215px; top: 92px; position: absolute"></asp:TextBox>
+            <asp:TextBox ID="TextBox12" runat="server" style="z-index: 1; left: 358px; top: 92px; position: absolute; height: 17px"></asp:TextBox>
+            <asp:Button ID="Button10" runat="server" style="z-index: 1; left: 499px; top: 91px; position: absolute" Text="Okay" />
             <br />
-            &nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Studenti Participanti" Width="166px" />
+            &nbsp;<asp:Button ID="Button3" runat="server" style="z-index: 1; left: 18px; top: 127px; position: absolute; width: 184px" Text="Inserare Competitie" />
+            <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 213px; top: 128px; position: absolute"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" style="z-index: 1; left: 213px; top: 128px; position: absolute"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 355px; top: 127px; position: absolute; height: 17px"></asp:TextBox>
+            <asp:TextBox ID="TextBox5" runat="server" style="z-index: 1; left: 494px; top: 126px; position: absolute; height: 18px"></asp:TextBox>
+            <asp:TextBox ID="TextBox6" runat="server" style="z-index: 1; left: 639px; top: 125px; position: absolute; height: 20px"></asp:TextBox>
             <br />
-            <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" style="margin-left: 7px" Text="Etape" Width="169px" />
+            <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 213px; top: 128px; position: absolute"></asp:TextBox>
+            <asp:Button ID="Button7" runat="server" style="z-index: 1; left: 776px; top: 125px; position: absolute; width: 49px" Text="Okay" />
             <br />
+            <asp:Button ID="Button4" runat="server" style="z-index: 1; left: 18px; top: 159px; position: absolute; width: 182px" Text="Accidentari" />
+            <asp:TextBox ID="TextBox7" runat="server" style="z-index: 1; left: 213px; top: 159px; position: absolute"></asp:TextBox>
+            <asp:Button ID="Button8" runat="server" style="z-index: 1; left: 642px; top: 159px; position: absolute" Text="Okay" />
             <br />
-            <asp:GridView ID="GridView1" runat="server">
-            </asp:GridView>
+            <asp:Button ID="Button5" runat="server" style="z-index: 1; left: 21px; top: 232px; position: absolute; width: 183px" Text="BackToMainMenu" />
+            <asp:Button ID="Button6" runat="server" style="z-index: 1; left: 23px; top: 195px; position: absolute; width: 177px" Text="Remove Utilizator" />
+            <asp:TextBox ID="TextBox8" runat="server" style="z-index: 1; left: 355px; top: 162px; position: absolute"></asp:TextBox>
+            <asp:TextBox ID="TextBox9" runat="server" style="z-index: 1; left: 495px; top: 161px; position: absolute; height: 18px"></asp:TextBox>
+            <asp:Button ID="Button9" runat="server" style="z-index: 1; left: 361px; top: 197px; position: absolute" Text="Okay" />
+            <asp:TextBox ID="TextBox10" runat="server" style="z-index: 1; left: 213px; top: 195px; position: absolute"></asp:TextBox>
+            <asp:Label ID="Label1" runat="server" ForeColor="#009900" style="z-index: 1; left: 438px; top: 199px; position: absolute" Text="Utilizatorul introdus nu exista"></asp:Label>
         </asp:Panel>
     
     </div>
