@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 </head>
-<body style="height: 286px">
+<body style="height: 280px">
     <form id="form1" runat="server">
         <asp:Panel ID="Panel1" runat="server" BackColor="White" ForeColor="#99CCFF" style="z-index: 1; left: 10px; top: 15px; position: absolute; height: 286px; width: 841px">
             <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 35px; top: 32px; position: absolute; right: 668px" Text="Inscrie Competitie" />

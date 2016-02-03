@@ -11,10 +11,12 @@ namespace activitatiSportive
 {
     public partial class StartPage : System.Web.UI.Page
     {
+        protected bool logat = false;
+        protected BussinesLayer bus;
         protected void Page_Load(object sender, EventArgs e)
         {
-            BussinesLayer bus = new BussinesLayer();
-            bus.afisareSportivi(GridView1);
+            bus = new BussinesLayer();
+            bus.afisareSportivi(GridView1, GridView2);
             UserName.Attributes.Add("onclick", "setUserNameToNothing()");
         }
 
@@ -26,17 +28,26 @@ namespace activitatiSportive
         protected void Logare(object sender, EventArgs e)
         {
            
-            BussinesLayer bus = new BussinesLayer();
+            bus = new BussinesLayer();
             if (bus.LogareLaBazaDeDate(UserName.Text, Password.Text, userValidation, passwordValidation) == 1)
             {
                 Response.Redirect("Administrator.aspx");
             }
             else if (bus.LogareLaBazaDeDate(UserName.Text, Password.Text, userValidation, passwordValidation) == 2)
             {
-                Response.Redirect("User.aspx");
+                logat = true;
             }
 
 
+        }
+
+        protected void Gridview1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "inscriereCompetitie")
+            {
+                string numeCompetitie = e.CommandArgument.ToString();
+                // do you what you need to do
+            }
         }
     }
 }

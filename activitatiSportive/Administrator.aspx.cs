@@ -28,6 +28,19 @@ namespace activitatiSportive
             // //   bll.TabelSelect("StudentiParticipanti", GridView1);
         }
 
+        protected void InsUtz(object sender, EventArgs e)
+        {
+            AdrEmail.Visible = true;
+            Passwd.Visible = true;
+            OkayUtilizator.Visible = true;
+        
+        }
+       
+
+      
+
+      
+
 
     }
 }

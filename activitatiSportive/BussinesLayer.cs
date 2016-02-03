@@ -59,12 +59,15 @@ namespace activitatiSportive
             return 0;
             
         }
-        public void afisareSportivi(GridView afisare)
+        public void afisareSportivi(GridView afisare1, GridView afisare2)
         {
             SqlParameter[] param = new SqlParameter[0];
-            string cmd = @"select Nume,Prenume,Academie FROM Studenti";
-            afisare.DataSource = conexiune.executeSelectQuery(cmd, param);
-            afisare.DataBind();
+            string cmd = @"select NumeCompetitie,DataCompetitie,Locatie FROM Competitie WHERE Status = 'Activa'";
+            afisare1.DataSource = conexiune.executeSelectQuery(cmd, param);
+            afisare1.DataBind();
+            cmd = @"select NumeCompetitie,DataCompetitie,Locatie FROM Competitie WHERE Status = 'Inactiva'";
+            afisare2.DataSource = conexiune.executeSelectQuery(cmd, param);
+            afisare2.DataBind();
         }
     }
 }
