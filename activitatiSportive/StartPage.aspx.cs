@@ -36,6 +36,8 @@ namespace activitatiSportive
             else if (bus.LogareLaBazaDeDate(UserName.Text, Password.Text, userValidation, passwordValidation) == 2)
             {
                 logat = true;
+
+
             }
 
 
