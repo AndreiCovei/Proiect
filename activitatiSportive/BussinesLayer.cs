@@ -11,20 +11,6 @@ namespace activitatiSportive
     public class BussinesLayer
     {
         dbConnection conexiune = new dbConnection();
-        public void InsertInStdPart( string s1, string s2, string s3, string s4,string s5, string s6)
-        {
-
-            SqlParameter[] param;
-            SqlParameter par1 = new SqlParameter("@nume", s1);
-            SqlParameter par2 = new SqlParameter("@prenume", s2);
-            SqlParameter par3 = new SqlParameter("@academie", s3);
-            SqlParameter par4 = new SqlParameter("@an", s4);
-            SqlParameter par5 = new SqlParameter("@spec", s5);
-            SqlParameter par6 = new SqlParameter("@gre", s6);
-            param = new SqlParameter[] { par1,par2,par3,par4,par5,par6};
-            string cmd = @"INSERT INTO StudentiParticipanti(Nume, Prenume, Academie, An_Studiu, Specializarea, Greutatea ) VALUES (@nume, @prenume, @academie, @an, @spec, @gre)";
-            conexiune.executeInsertQuery(cmd, param);
-        }
         public int LogareLaBazaDeDate(string adresaEmail,string parola,Label vUsername,Label vPassword)
         {
             SqlParameter[] param = new SqlParameter[0];
@@ -69,9 +55,24 @@ namespace activitatiSportive
             afisare2.DataSource = conexiune.executeSelectQuery(cmd, param);
             afisare2.DataBind();
         }
-        public void inscriereUtilizatorCompetitie(String Utilizator,String Competitie,String DataCompetitie)
-        { 
-            
+        public void inscriereUtilizatorCompetitie(string Utilizator,string Competitie,string DataCompetitie)
+        {
+            SqlParameter[] param = new SqlParameter[0];
+            string cmd=@"select id FROM Utilizatori WHERE AdresaDeEmail='"+ Utilizator+"'";
+            DataTable tab = new DataTable();
+            tab = conexiune.executeSelectQuery(cmd, param);
+            int idUtilizator = int.Parse(tab.Rows[0][0].ToString());
+            cmd = @"select idCompetitie FROM Competitie WHERE NumeCompetitie = '" + Competitie + "' " + "AND DataCompetitie = '" + DataCompetitie + "'";
+            tab = conexiune.executeSelectQuery(cmd, param);
+            int idCompetitie = int.Parse(tab.Rows[0][0].ToString());
+            SqlParameter[] parametri;
+            SqlParameter param1 = new SqlParameter("@idCompetitie", idCompetitie);
+            SqlParameter param2 = new SqlParameter("@dataCompetitie", DataCompetitie);
+            SqlParameter param3 = new SqlParameter("@idUtilizator", idUtilizator);
+            SqlParameter param4 = new SqlParameter("@Status", "In asteptare");
+            parametri = new SqlParameter[] { param1, param2, param3, param4 };
+            cmd = @"INSERT INTO TabelaInscrieri(idCompetitie,DataInscriere,idUtilizator,Status) VALUES (@idCompetitie,@dataCompetitie,@idUtilizator,@Status)";
+            conexiune.executeInsertQuery(cmd, parametri);
         }
     }
 }

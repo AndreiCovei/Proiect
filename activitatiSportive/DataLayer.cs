@@ -11,6 +11,7 @@ namespace activitatiSportive
     {
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
+        int test = 0;
 
         /// <constructor>
         /// Initialise Connection
@@ -76,7 +77,7 @@ namespace activitatiSportive
                 myCommand.CommandText = _query;
                 myCommand.Parameters.AddRange(sqlParameter);
                 myAdapter.InsertCommand = myCommand;
-                myCommand.ExecuteNonQuery();
+                test = myCommand.ExecuteNonQuery();
             }
             catch (SqlException e)
             {
