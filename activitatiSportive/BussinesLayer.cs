@@ -11,6 +11,31 @@ namespace activitatiSportive
     public class BussinesLayer
     {
         dbConnection conexiune = new dbConnection();
+        public void OkayUtilizator(String Nume, String Prenume, String Statut, String AdresaEmail, String Parola)
+        {
+            SqlParameter[] param;
+            SqlParameter par1 = new SqlParameter("@Nume", Nume);
+            SqlParameter par2 = new SqlParameter("@Prenume", Prenume);
+            SqlParameter par3 = new SqlParameter("@Statut", Statut);
+            SqlParameter par4 = new SqlParameter("@adresaEmail", AdresaEmail);
+            SqlParameter par5 = new SqlParameter("@parola", Parola);
+            param = new SqlParameter[] { par1, par2, par3, par4, par5 };
+            string cmd = @"INSERT INTO UTILIZATORI(Nume,Prenume,Statut,AdresaDeEmail,Password) VALUES (@Nume,@Prenume,@Statut,@adresaEmail,@parola);";
+            conexiune.executeInsertQuery(cmd, param);
+
+        }
+        public void OkayCompetitie(String NumeCompetitie, String DataCompetitie, String Locatie, String StatutCompetitie)
+        {
+            SqlParameter[] param;
+            SqlParameter par1 = new SqlParameter("@NumeCompetitie", NumeCompetitie);
+            SqlParameter par2 = new SqlParameter("@DataCompetitie", DataCompetitie);
+            SqlParameter par3 = new SqlParameter("@Locatie", Locatie);
+            SqlParameter par4 = new SqlParameter("@StatutCompetitie", StatutCompetitie);
+
+            param = new SqlParameter[] { par1, par2, par3, par4 };
+            string cmd = @"INSERT INTO COMPETITIE(NumeCompetitie,DataCompetitie,Locatie,StatutCompetitie) VALUES (@NumeCompetitie,@DataCompetitie,@Locatie,@StatutCompetitie)";
+            conexiune.executeInsertQuery(cmd, param);
+        }
         public int LogareLaBazaDeDate(string adresaEmail,string parola,Label vUsername,Label vPassword)
         {
             SqlParameter[] param = new SqlParameter[0];
