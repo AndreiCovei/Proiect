@@ -40,6 +40,33 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.Button InsertUtz;
         
         /// <summary>
+        /// Nume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Nume;
+        
+        /// <summary>
+        /// Prenume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Prenume;
+        
+        /// <summary>
+        /// Statut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Statut;
+        
+        /// <summary>
         /// OkayUtilizator control.
         /// </summary>
         /// <remarks>
@@ -58,22 +85,31 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.TextBox AdrEmail;
         
         /// <summary>
-        /// Button3 control.
+        /// NumeCompetitie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.TextBox NumeCompetitie;
         
         /// <summary>
-        /// Button7 control.
+        /// IdCompetitie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.TextBox IdCompetitie;
+        
+        /// <summary>
+        /// InsUtl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button InsUtl;
         
         /// <summary>
         /// Passwd control.
@@ -85,6 +121,15 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.TextBox Passwd;
         
         /// <summary>
+        /// DataCompetitie control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DataCompetitie;
+        
+        /// <summary>
         /// Button4 control.
         /// </summary>
         /// <remarks>
@@ -94,13 +139,13 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
-        /// Button8 control.
+        /// OkayCompetitie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button OkayCompetitie;
         
         /// <summary>
         /// Button5 control.
@@ -121,15 +166,6 @@ namespace activitatiSportive {
         protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// Button9 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
-        
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -137,5 +173,23 @@ namespace activitatiSportive {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// Locatie control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Locatie;
+        
+        /// <summary>
+        /// StatutCompetitie control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox StatutCompetitie;
     }
 }
