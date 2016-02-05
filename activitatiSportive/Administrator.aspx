@@ -35,7 +35,7 @@
             <asp:Button ID="Button8" runat="server" style="z-index: 1; left: 642px; top: 159px; position: absolute" Text="Okay" Visible="False" />
             <br />
             <asp:Button ID="Button5" runat="server" style="z-index: 1; left: 20px; top: 246px; position: absolute; width: 184px" Text="BackToMainMenu" Height="30px" />
-            <asp:Button ID="Button6" runat="server" style="z-index: 1; left: 20px; top: 205px; position: absolute; width: 184px" Text="Remove Utilizator" Height="30px" OnClick="Button6_Click" />
+            <asp:Button ID="Button6" runat="server" style="z-index: 1; left: 20px; top: 205px; position: absolute; width: 184px" Text="Remove Utilizator" Height="30px"  />
             <asp:Button ID="Button9" runat="server" style="z-index: 1; left: 361px; top: 197px; position: absolute" Text="Okay" Visible="False" />
             <asp:Label ID="Label1" runat="server" ForeColor="#009900" style="z-index: 1; left: 438px; top: 199px; position: absolute" Text="Utilizatorul introdus nu exista" Visible="False"></asp:Label>
         </asp:Panel>

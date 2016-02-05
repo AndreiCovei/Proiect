@@ -11,7 +11,7 @@ namespace activitatiSportive
 {
     public partial class StartPage : System.Web.UI.Page
     {
-        protected bool logat = false;
+        protected static bool logat = false;
         protected BussinesLayer bus;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -36,7 +36,14 @@ namespace activitatiSportive
             else if (bus.LogareLaBazaDeDate(UserName.Text, Password.Text, userValidation, passwordValidation) == 2)
             {
                 logat = true;
-
+                Label1.Visible = false;
+                Label2.Visible = false;
+                Password.Visible = false;
+                UserName.Visible = false;
+                userValidation.Visible = false;
+                passwordValidation.Visible = false;
+                Button2.Visible = false;
+                MesajLogare.Visible = false;
 
             }
 
@@ -49,6 +56,26 @@ namespace activitatiSportive
             {
                 string numeCompetitie = e.CommandArgument.ToString();
                 // do you what you need to do
+                if (logat == false)
+                {
+                    MesajLogare.Visible = true;
+                }
+                else
+                {
+                    String textul; 
+                    for(int i = 0; i < GridView1.Rows.Count ; i++) {
+                        for (int j = 0; j < GridView1.Rows[i].Cells.Count; j++)
+                        {
+                            LinkButton butonul = (LinkButton)GridView1.Rows[i].Cells[j].FindControl("numeCompetitie");
+                            textul = butonul.Text;
+                            if (GridView1.Rows[i].Cells[0].Text == numeCompetitie)
+                            {
+                                TextBox1.Text = GridView1.Rows[i].Cells[0].Text;
+                            }
+                        }
+                    }
+                   // bus.inscriereUtilizatorCompetitie(UserName.Text,numeCompetitie,
+                }
             }
         }
     }

@@ -9,6 +9,23 @@
         #form1 {
             height: 605px;
         }
+        .auto-style1 {
+            position: absolute;
+            top: 136px;
+            left: 71px;
+            z-index: 1;
+            width: 409px;
+        }
+        .auto-style2 {
+            margin-top: 7px;
+        }
+        .auto-style3 {
+            position: absolute;
+            top: 393px;
+            left: 743px;
+            z-index: 1;
+            width: 189px;
+        }
     </style>
 </head>
 <body>
@@ -20,8 +37,11 @@
         <p style="margin-left: 60px; height: 25px; width: 600px;">
             Pentru a te inscrie la o competitie apasa pe numele competitiei.
         </p>
+        <div style="margin-left: 60px; height: 25px; width: 600px;">
+        <asp:Label ID="MesajLogare" runat="server" CssClass="auto-style1" ForeColor="Red" Text="Trebuie mai intai sa te loghezi pentru a te putea inscrie la competitie" Visible="False"></asp:Label>
+        </div>
         <div style="display:inline-block; margin-right:10px; width: 393px; margin-top: 0px;">
-            <asp:GridView ID="GridView1" runat="server" Height="16px" autogeneratecolumns="false" style="margin-left: 60px; margin-top: 0px" Width="16px" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" OnRowCommand="Gridview1_RowCommand">
+            <asp:GridView ID="GridView1" runat="server" Height="67px" autogeneratecolumns="false" style="margin-left: 60px; " Width="16px" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" OnRowCommand="Gridview1_RowCommand" CssClass="auto-style2">
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
                 <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
@@ -47,7 +67,7 @@
             </asp:GridView>
         </div>
         <div style="display:inline-block">
-            <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CaptionAlign="Bottom" CellPadding="4" Height="16px" style="margin-left: 46px; margin-top: 77px;" Width="283px">
+            <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CaptionAlign="Bottom" CellPadding="4" Height="41px" style="margin-left: 46px; margin-top: 77px;" Width="283px">
                 <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
                 <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
@@ -58,7 +78,10 @@
                 <SortedDescendingCellStyle BackColor="#F6F0C0" />
                 <SortedDescendingHeaderStyle BackColor="#7E0000" />
             </asp:GridView>
+            <br />
         </div>
+        
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style3"></asp:TextBox>
         
         <br />
         <asp:Panel ID="Panel1" runat="server" style="z-index: 1; left: 10px; top: 441px; position: absolute; height: 136px; width: 782px">
