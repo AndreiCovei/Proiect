@@ -36,6 +36,21 @@ namespace activitatiSportive
             string cmd = @"INSERT INTO COMPETITIE(NumeCompetitie,DataCompetitie,Locatie,StatutCompetitie) VALUES (@NumeCompetitie,@DataCompetitie,@Locatie,@StatutCompetitie)";
             conexiune.executeInsertQuery(cmd, param);
         }
+        public void OkayRemove(String NumeR, String PrenumeR, String StatutR, String AdrEmailR, String PasswdR)
+        {
+            SqlParameter[] param;
+            SqlParameter par1 = new SqlParameter("@NumeR", NumeR);
+            SqlParameter par2 = new SqlParameter("@PrenumeR", PrenumeR);
+            SqlParameter par3 = new SqlParameter("@StatutR", StatutR);
+            SqlParameter par4 = new SqlParameter("@AdrEmailR", AdrEmailR);
+            SqlParameter par5 = new SqlParameter("@PasswdR", PasswdR);
+            param = new SqlParameter[] { par1, par2, par3, par4, par5 };
+            //SqlCommand cmd = new SqlCommand(@"DELETE FROM UTILIZATORI WHERE Nume=@NumeR", conexiune);
+            //SqlParameter parametru;
+            //SqlDataAdapter adapter = new SqlDataAdapter();
+            //adapter.DeleteCommand = cmd;
+            //parametru = cmd.Parameters.Add("Nume", DbType.String, 20, "Nume");
+        }
         public int LogareLaBazaDeDate(string adresaEmail,string parola,Label vUsername,Label vPassword)
         {
             SqlParameter[] param = new SqlParameter[0];
@@ -61,7 +76,7 @@ namespace activitatiSportive
                         return int.Parse(dr["Statut"].ToString());
                     }
                 }
-                string cmd2 = @"select * FROM Utilizatori where ='";
+                //string cmd2 = @"select * FROM Utilizatori where ='";
             }
             else
             {
@@ -69,6 +84,18 @@ namespace activitatiSportive
             }
             return 0;
             
+        }
+        public void OkayAccidentari(String id, String idCompetitieA, String IdUtilizatorA, String TipulAccidentului)
+        {
+            SqlParameter[] param;
+            SqlParameter par1 = new SqlParameter("@id", id);
+            SqlParameter par2 = new SqlParameter("@idCompetitieA", idCompetitieA);
+            SqlParameter par3 = new SqlParameter("@IdUtilizatorA", IdUtilizatorA);
+            SqlParameter par4 = new SqlParameter("@TipulAccidentului", TipulAccidentului);
+
+            param = new SqlParameter[] { par1, par2, par3, par4 };
+            string cmd = @"INSERT INTO ACCIDENTARI(id,idCompetitie,idUtilizator,TipulAccidentului) VALUES(@id,@idCompetitieA,@IdUtilizatorA,@TipulAccidentului)";
+            conexiune.executeInsertQuery(cmd, param);
         }
         public void afisareSportivi(GridView afisare1, GridView afisare2)
         {
